@@ -1,4 +1,9 @@
-<%= @municipality.name %><br>
+<p>
+<%= @municipality.name %>
+</p>
+<p>
+<%= image_tag @municipality.header_url %>
+</p>
 
 <%= link_to 'Home', root_path %>
 <%= link_to 'Destroy', municipality_path(@municipality),

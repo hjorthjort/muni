@@ -26,7 +26,7 @@ class MunicipalitiesController < ApplicationController
 
   private
     def municipality_params
-      params.require(:municipality).permit(:name, :official_id)
+      params.require(:municipality).permit(:name, :official_id, :header_url)
     end
 
 end
