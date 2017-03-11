@@ -1,1 +1,12 @@
 <h1>New Municipality</h1>
+
+<%= form_for :municipality, url: municipalities_path do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :official_id %>
+  <%= f.text_field :official_id %>
+
+  <%= f.submit %>
+<% end %>
