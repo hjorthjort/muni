@@ -1,2 +1,11 @@
 <h1>Welcome to muni</h1>
-<p>May we suggest <%= link_to 'Boxholm!PLACEHOLDER', root_path %> </p>
+<p>May we suggest <%= link_to 'Boxholm', municipality_path(1) %>?</p>
+
+<p>Or pick from the list
+<ul>
+<% @municipalities.each do |municipality| %>
+  <li>
+    <%= link_to municipality.name, municipality_path(municipality) %>
+  </li>
+<% end %>
+</ul>

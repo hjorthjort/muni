@@ -1,4 +1,8 @@
 class MunicipalitiesController < ApplicationController
+  def show
+    @municipality = Municipality.find(params[:id])
+  end
+
   def new
   end
 
