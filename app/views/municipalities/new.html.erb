@@ -1,5 +1,19 @@
 <h1>New Municipality</h1>
 
+<% if @municipality.errors.any? %>
+  <div id="errors">
+    <h2>
+      <%= pluralize(@municipality.errors.count, "error") %>
+      prohibited this municipalit from being saved
+    </h2>
+    <ul>
+    <% @municipality.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for :municipality, url: municipalities_path do |f| %>
 
   <%= f.label :name %>

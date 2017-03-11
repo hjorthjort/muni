@@ -4,6 +4,7 @@ class MunicipalitiesController < ApplicationController
   end
 
   def new
+    @municipality = Municipality.new
   end
 
   def create
