@@ -17,6 +17,13 @@ class MunicipalitiesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Municipality.find(params[:id])
+    @article.destroy
+
+    redirect_to root_path
+  end
+
   private
     def municipality_params
       params.require(:municipality).permit(:name, :official_id)

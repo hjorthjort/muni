@@ -1,3 +1,5 @@
 <%= @municipality.name %><br>
 
 <%= link_to 'Home', root_path %>
+<%= link_to 'Destroy', municipality_path(@municipality),
+  method: :delete, data: { confirm: 'Are you sure?' } %>

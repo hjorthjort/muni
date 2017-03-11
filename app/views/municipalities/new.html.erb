@@ -16,10 +16,13 @@
 
 <%= form_for :municipality, url: municipalities_path do |f| %>
 
-  <%= f.label :name %>
+  <p>
+  <%= f.label :name %><br>
   <%= f.text_field :name %>
+  </p>
 
-  <%= f.label :official_id %>
+  <p>
+  <%= f.label :official_id %><br>
   <%= f.text_field :official_id %>
 
   <%= f.submit %>
